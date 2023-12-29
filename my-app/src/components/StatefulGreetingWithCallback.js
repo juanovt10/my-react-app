@@ -8,7 +8,8 @@ class StatefulGreetingWithCallback extends React.Component {
 
         this.state = {
             introduction: "Hello!",
-            buttonText: "Exit",            
+            buttonText: "Exit",
+            count: 0,   
         };
     };
 
@@ -18,8 +19,11 @@ class StatefulGreetingWithCallback extends React.Component {
         // meaining that other code, in this case the last console logs
         // will display the previous states
         this.setState({
-            introduction: "Goodbye",
-            buttonText: "Enter",
+
+            //the this keyword refers to the current state if the
+            // introduction state
+            introduction: this.state.introduction === "Hello!" ? "Goodbye!": "Hello!",
+            buttonText: this.state.buttonText === "Exit" ? "Enter": "Exit"
         }, () => {
 
             // This is a callback function, instead of running
@@ -34,11 +38,28 @@ class StatefulGreetingWithCallback extends React.Component {
         console.log(this.state.buttonText);
     };
 
+    increment() {
+        this.setState({
+            count: this.state.count + 1
+        });
+        console.log(this.state.count)
+    }
+
+    incrementFive() {
+        this.increment()
+        this.increment()
+        this.increment()
+        this.increment()
+        this.increment()
+    }
+
     render () {
         return (
             <div>
                 <h1>{this.state.introduction} {this.props.greeting}</h1>
                 <button onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                <button onClick={() => this.incrementFive()}>Increment Five</button>
+                <p>You have clicked {this.state.count} times</p>
             </div>
         )
     }
