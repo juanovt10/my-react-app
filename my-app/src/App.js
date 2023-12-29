@@ -13,7 +13,8 @@ import './App.css';
 // import ConditionalRenderingFunctional from './components/ConditionalRenderingFunctional';
 // import NestingComponents from './components/NestingComponents';
 // import NestingComponents from './components/NestingComponents';
-import MethodsAsPropsParent from './components/MethodsAsPropsParent';
+// import MethodsAsPropsParent from './components/MethodsAsPropsParent';
+import NavBarFormChallenge from "./components/NavBarFormChallenge";
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
       {/* <ConditionalRenderingClass />
       <ConditionalRenderingFunctional connected={false} /> */}
       {/* <NestingComponents /> */}
-      <MethodsAsPropsParent />
+      {/* <MethodsAsPropsParent /> */}
+      <NavBarFormChallenge />
     </div>
   );
 }
