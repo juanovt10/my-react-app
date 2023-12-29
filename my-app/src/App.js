@@ -6,8 +6,11 @@ import './App.css';
 // import StatefulGreeting from './components/StatefulGreeting';
 // import StatefulGreetingWithCallback from './components/StatefulGreetingWithCallback';
 // import NavBarSimpleChallenge from "./components/NavBarSimpleChallenge";
-import EventsClass from './components/EventsClass';
-import EventsFunctional from './components/EventsFunctional';
+// import EventsClass from './components/EventsClass';
+// import EventsFunctional from './components/EventsFunctional';
+// import EventsBinding from './components/EventsBinding';
+import ConditionalRenderingClass from './components/ConditionalRenderingClass';
+import ConditionalRenderingFunctional from './components/ConditionalRenderingFunctional';
 
 function App() {
   return (
@@ -18,8 +21,11 @@ function App() {
       {/* <StatefulGreeting greeting="I'm a stateful class component!"/> */}
       {/* <StatefulGreetingWithCallback greeting="I'm a stateful class component!" /> */}
       {/* <NavBarSimpleChallenge /> */}
-      <EventsFunctional />
-      <EventsClass />
+      {/* <EventsFunctional />
+      <EventsClass /> */}
+      {/* <EventsBinding /> */}
+      <ConditionalRenderingClass />
+      <ConditionalRenderingFunctional connected={false} />
     </div>
   );
 }
