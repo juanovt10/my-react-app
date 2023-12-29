@@ -14,51 +14,37 @@ class StatefulGreetingWithCallback extends React.Component {
     };
 
     handleClick() {
-
-        // set state is an asynchronous function
-        // meaining that other code, in this case the last console logs
-        // will display the previous states
-        this.setState({
-
-            //the this keyword refers to the current state if the
-            // introduction state
-            introduction: this.state.introduction === "Hello!" ? "Goodbye!": "Hello!",
-            buttonText: this.state.buttonText === "Exit" ? "Enter": "Exit"
-        }, () => {
-
-            // This is a callback function, instead of running
-            // simultaneously with the setState, it will run only 
-            // after the setState is completed
-            console.log("new state", this.state.introduction);
-            console.log("new state", this.state.buttonText);
+        // here we change the code to include prevState 
+        // and prevProps, the purpose of this is to always 
+        // check for the current states and use to see 
+        // what to check
+        this.setState((prevState, prevProps) => {
+            console.log("Previous State: ", prevState)
+            console.log("Previous Props: ", prevProps)
+            return {
+                introduction: prevState.introduction === "Hello!" ? "Goodbye!": "Hello!",
+                buttonText: prevState.buttonText === "Exit" ? "Enter": "Exit"
+            }
         });
-
-        // this will be executed before the setState is finished
-        console.log(this.state.introduction);
-        console.log(this.state.buttonText);
     };
 
     increment() {
-        this.setState({
-            count: this.state.count + 1
-        });
-        console.log(this.state.count)
+        this.setState((prevState, prevProps) => {
+            console.log("Previous State: ", prevState)
+            console.log("Previous Props: ", prevProps)
+            return {
+                count: prevState.count + 1
+            }
+        })
     }
 
-    incrementFive() {
-        this.increment()
-        this.increment()
-        this.increment()
-        this.increment()
-        this.increment()
-    }
 
     render () {
         return (
             <div>
                 <h1>{this.state.introduction} {this.props.greeting}</h1>
                 <button onClick={() => this.handleClick()}>{this.state.buttonText}</button>
-                <button onClick={() => this.incrementFive()}>Increment Five</button>
+                <button onClick={() => this.increment()}>Increment</button>
                 <p>You have clicked {this.state.count} times</p>
             </div>
         )
