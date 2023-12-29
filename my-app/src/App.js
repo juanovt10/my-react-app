@@ -5,6 +5,7 @@ import FunctionalGreetingWithProps from './components/FunctionalGreetingWithProp
 import Sidebar from './components/SidebarChallenge';
 import StatefulGreeting from './components/StatefulGreeting';
 import StatefulGreetingWithCallback from './components/StatefulGreetingWithCallback';
+import NavBarSimpleChallenge from "./components/NavBarSimpleChallenge";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <FunctionalGreetingWithProps greeting="Nice to meet you!" name="Mike" age="32" /> */}
       {/* <Sidebar /> */}
       {/* <StatefulGreeting greeting="I'm a stateful class component!"/> */}
-      <StatefulGreetingWithCallback greeting="I'm a stateful class component!" />
+      {/* <StatefulGreetingWithCallback greeting="I'm a stateful class component!" /> */}
+      <NavBarSimpleChallenge />
     </div>
   );
 }
