@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import css from "./css/NavBarForm.module.css"
+import NavBarChildChallenge from './NavBarChildChallenge'
 
 export class NavBarFormChallenge extends Component {
 
@@ -12,16 +13,23 @@ export class NavBarFormChallenge extends Component {
     }
 
     handleClick = () => {
-        this.setState({
-            isLoggedIn: false,
-        })
+        this.setState(prevState => ({
+            isLoggedIn: !prevState.isLoggedIn,
+        }))
     }
 
     render() {
         return (
             <div className={css.NavBar}>
                 <h1>My Gallery</h1>
-                <button onClick={this.handleClick}>Login</button>        
+                {this.state.isLoggedIn ? 
+                    <button onClick={this.handleClick}>{this.state.isLoggedIn ? 'logout' : 'login'}</button> : ""
+                }
+                {this.state.isLoggedIn ? "": 
+                    <NavBarChildChallenge 
+                        isLoggedIn={this.state.isLoggedIn}
+                    />
+                }
             </div>
         )
     }
