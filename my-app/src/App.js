@@ -15,7 +15,8 @@ import './App.css';
 // import NestingComponents from './components/NestingComponents';
 // import MethodsAsPropsParent from './components/MethodsAsPropsParent';
 // import NavBarFormChallenge from "./components/NavBarFormChallenge";
-import RenderingLists from './components/RenderingLists';
+// import RenderingLists from './components/RenderingLists';
+import ContentChallenge from './components/ContentChallenge';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <NestingComponents /> */}
       {/* <MethodsAsPropsParent /> */}
       {/* <NavBarFormChallenge /> */}
-      <RenderingLists />
+      {/* <RenderingLists /> */}
+      <ContentChallenge />
 
     </div>
   );
