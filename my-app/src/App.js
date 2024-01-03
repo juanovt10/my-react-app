@@ -17,7 +17,8 @@ import './App.css';
 // import NavBarFormChallenge from "./components/NavBarFormChallenge";
 // import RenderingLists from './components/RenderingLists';
 // import ContentChallenge from './components/ContentChallenge';
-import LifeCyclesCDM from './components/LifeCyclesCDM';
+// import LifeCyclesCDM from './components/LifeCyclesCDM';
+import LifeCyclesCDU from './components/LifeCyclesCDU'
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/* <NavBarFormChallenge /> */}
       {/* <RenderingLists /> */}
       {/* <ContentChallenge /> */}
-      <LifeCyclesCDM />
+      {/* <LifeCyclesCDM /> */}
+      <LifeCyclesCDU />
 
     </div>
   );
