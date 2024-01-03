@@ -18,7 +18,8 @@ import './App.css';
 // import RenderingLists from './components/RenderingLists';
 // import ContentChallenge from './components/ContentChallenge';
 // import LifeCyclesCDM from './components/LifeCyclesCDM';
-import LifeCyclesCDU from './components/LifeCyclesCDU'
+// import LifeCyclesCDU from './components/LifeCyclesCDU'
+import LifeCyclesCWU from './components/LifeCyclesCWU';
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
       {/* <RenderingLists /> */}
       {/* <ContentChallenge /> */}
       {/* <LifeCyclesCDM /> */}
-      <LifeCyclesCDU />
+      {/* <LifeCyclesCDU /> */}
+      <LifeCyclesCWU />
 
     </div>
   );
