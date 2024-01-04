@@ -15,11 +15,12 @@ import './App.css';
 // import NestingComponents from './components/NestingComponents';
 // import MethodsAsPropsParent from './components/MethodsAsPropsParent';
 // import NavBarFormChallenge from "./components/NavBarFormChallenge";
-// import RenderingLists from './components/RenderingLists';
-import ContentChallenge from './components/ContentChallenge';
+// // import RenderingLists from './components/RenderingLists';
+// import ContentChallenge from './components/ContentChallenge';
 // import LifeCyclesCDM from './components/LifeCyclesCDM';
 // import LifeCyclesCDU from './components/LifeCyclesCDU'
 // import LifeCyclesCWU from './components/LifeCyclesCWU';
+import ControlledForm from './components/ControlledForm';
 
 function App() {
   return (
@@ -39,10 +40,11 @@ function App() {
       {/* <MethodsAsPropsParent /> */}
       {/* <NavBarFormChallenge /> */}
       {/* <RenderingLists /> */}
-      <ContentChallenge />
+      {/* <ContentChallenge /> */}
       {/* <LifeCyclesCDM /> */}
       {/* <LifeCyclesCDU /> */}
       {/* <LifeCyclesCWU /> */}
+      <ControlledForm />
 
     </div>
   );
