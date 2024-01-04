@@ -16,10 +16,10 @@ import './App.css';
 // import MethodsAsPropsParent from './components/MethodsAsPropsParent';
 // import NavBarFormChallenge from "./components/NavBarFormChallenge";
 // import RenderingLists from './components/RenderingLists';
-// import ContentChallenge from './components/ContentChallenge';
+import ContentChallenge from './components/ContentChallenge';
 // import LifeCyclesCDM from './components/LifeCyclesCDM';
 // import LifeCyclesCDU from './components/LifeCyclesCDU'
-import LifeCyclesCWU from './components/LifeCyclesCWU';
+// import LifeCyclesCWU from './components/LifeCyclesCWU';
 
 function App() {
   return (
@@ -39,10 +39,10 @@ function App() {
       {/* <MethodsAsPropsParent /> */}
       {/* <NavBarFormChallenge /> */}
       {/* <RenderingLists /> */}
-      {/* <ContentChallenge /> */}
+      <ContentChallenge />
       {/* <LifeCyclesCDM /> */}
       {/* <LifeCyclesCDU /> */}
-      <LifeCyclesCWU />
+      {/* <LifeCyclesCWU /> */}
 
     </div>
   );
