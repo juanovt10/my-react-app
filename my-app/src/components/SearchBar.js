@@ -35,7 +35,7 @@ export class SearchBar extends Component {
         this.setState({
             names: filteredNames,
         })
-        console.log(filteredNames)
+        console.log(filteredNames) 
     }
 
     render() {
