@@ -2,21 +2,26 @@ import React, {useState, useEffect} from 'react'
 
 function UseEffectCounter() {
     const [count, setCount] = useState(0);
+    const [time, setTime] = useState(0);
 
-    // here, for the useEffect to not be triggered 
-    // each time the component is rerendered we add the 
-    // second parameter, in this case [count]
+    // here the second parameters triggers the 
+    // function conditionally (when count updates)
     useEffect(() => {
         console.log('count 1 effect')
         document.title = count;
     }, [count]);
 
-    const [count2, setCount2] = useState(0);
-
+    // here we only want this to be triggered once
+    // so we pass an empty array 
     useEffect(() => {
-        console.log('count 2 effect')
-        document.title = count2;
-    }, [count2]);
+        console.log('Creating timer');
+        const interval = setInterval(() => {
+            setTime(time => time + 1)
+        }, 1000)
+    }, []);
+
+    // if we wanted to be triggered each time the component
+    // is rendered, just don't pass a a second parameter
 
     return (
         <div>
@@ -25,11 +30,7 @@ function UseEffectCounter() {
             }>
                 Increment count ({count})
             </button>
-            <button onClick={
-                () => setCount2(count2 => count2 + 1)
-            }>
-                Increment count ({count2})
-            </button>
+            <h2>Time is {time}</h2>
         </div>
     )
 }
