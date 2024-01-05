@@ -30,7 +30,8 @@ import './App.css';
 // import UseEffectCounterContainer from './components/UseEffectCounterContainer';
 // import ContentHooksChallenge from './components/ContentHooksChallenge';
 // import HTTPRequests from './components/HTTPRequests';
-import HTTPPost from './components/HTTPPost';
+// import HTTPPost from './components/HTTPPost';
+import HTTPHooks from './components/HTTPHooks';
 
 function App() {
   return (
@@ -64,7 +65,8 @@ function App() {
       {/* <UseEffectCounterContainer /> */}
       {/* <ContentHooksChallenge /> */}
       {/* <HTTPRequests /> */}
-      <HTTPPost />
+      {/* <HTTPPost /> */}
+      <HTTPHooks />
 
     </div>
   );
