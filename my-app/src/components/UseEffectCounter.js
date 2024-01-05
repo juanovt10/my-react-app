@@ -16,8 +16,14 @@ function UseEffectCounter() {
     useEffect(() => {
         console.log('Creating timer');
         const interval = setInterval(() => {
-            setTime(time => time + 1)
-        }, 1000)
+            console.log('Interval executed')
+            setTime(prevTime => prevTime + 1)
+        }, 1000);
+        // this is the cleanup function 
+        return () => {
+            console.log('cleaning up')
+            clearInterval(interval);
+        }
     }, []);
 
     // if we wanted to be triggered each time the component
