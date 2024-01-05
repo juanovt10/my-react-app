@@ -28,7 +28,8 @@ import './App.css';
 // import UseStateWithObjects from './components/UseStateWithObjects';
 // import UseEffectCounter from './components/UseEffectCounter';
 // import UseEffectCounterContainer from './components/UseEffectCounterContainer';
-import ContentHooksChallenge from './components/ContentHooksChallenge';
+// import ContentHooksChallenge from './components/ContentHooksChallenge';
+import HTTPRequests from './components/HTTPRequests';
 
 function App() {
   return (
@@ -60,7 +61,8 @@ function App() {
       {/* <UseStateWithObjects /> */}
       {/* <UseEffectCounter /> */}
       {/* <UseEffectCounterContainer /> */}
-      <ContentHooksChallenge />
+      {/* <ContentHooksChallenge /> */}
+      <HTTPRequests />
 
     </div>
   );
