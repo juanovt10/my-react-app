@@ -27,7 +27,8 @@ import './App.css';
 // import UseStateWithArrays from './components/UseStateWithArrays';
 // import UseStateWithObjects from './components/UseStateWithObjects';
 // import UseEffectCounter from './components/UseEffectCounter';
-import UseeffectCointerContainer from './components/UseEffectCounterContainer';
+// import UseEffectCounterContainer from './components/UseEffectCounterContainer';
+import ContentHooksChallenge from './components/ContentHooksChallenge';
 
 function App() {
   return (
@@ -58,7 +59,8 @@ function App() {
       {/* <UseStateWithArrays /> */}
       {/* <UseStateWithObjects /> */}
       {/* <UseEffectCounter /> */}
-      <UseeffectCointerContainer />
+      {/* <UseEffectCounterContainer /> */}
+      <ContentHooksChallenge />
 
     </div>
   );
